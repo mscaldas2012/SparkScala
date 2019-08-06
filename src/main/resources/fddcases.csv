@@ -1,0 +1,7 @@
+state,patID,serotypeSummary,dtSpec,expectedSerotype
+GA,P123,Typii,2018/03/05,Typii
+GA,P123,,2018/03/07,Typii
+GA,P123,,2018/03/28,SS2
+GA,P123,SS2,2018/04/01,SS2
+GA,P123,,2018/03/04,Typii
+GA,P456,,2018/03/12,Null

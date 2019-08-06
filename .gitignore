@@ -1,0 +1,8 @@
+output*
+.idea
+spark*
+project
+target
+volumes
+
+*.class

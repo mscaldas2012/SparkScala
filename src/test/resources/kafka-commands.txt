@@ -1,0 +1,15 @@
+## Create Topic
+docker-compose exec kafka kafka-topics --create --topic fddcases  --partitions 1 --replication-factor 1 --zookeeper zookeeper:2181
+
+## Send messages with Key and Json to topic:
+docker-compose exec kafka kafka-console-producer --broker-list kafka:9092 --topic fddcases --property "parse.key=true" --property "key.separator=^"
+
+GA-123^{"state": "GA","patID": "123","serotypeSummary":"Typii","dtSpec":"2018/03/05"}
+GA-123^{"state": "GA","patID": "123","serotypeSummary":null,"dtSpec":"2018/03/07"}
+GA-123^{"state": "GA","patID": "123","serotypeSummary":"SS2","dtSpec":"2018/04/01"}
+GA-123^{"state": "GA","patID": "123","serotypeSummary":null,"dtSpec":"2018/03/04"}
+
+## List topic content:
+
+docker-compose exec kafka kafka-console-consumer --bootstrap-server kafka:9092 --topic fddcases --from-beginning
+
