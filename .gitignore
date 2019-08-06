@@ -6,3 +6,4 @@ target
 volumes
 
 *.class
+.ipyn_checkpoints
